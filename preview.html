@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Planner</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
+   
+</head>
+
+<body class="bg-gray-100 h-screen flex flex-col justify-center items-center">
+    <!-- Overall section -->
+    <div class="mx-auto max-w-[65%] h-auto bg-white rounded-lg shadow-lg mt-6 p-4">
+        <!-- Header -->
+        <header class="bg-blue-500 rounded-t-lg py-4 text-center">
+            <h1 class="text-3xl font-bold text-white">ACTIVITY PLANNER</h1>
+        </header>
+        <!-- Main -->
+        <main class="p-6">
+            <!-- Todo area -->
+            <div id="preview-todo-container" class="h-auto overflow-y-auto text-gray-800">
+
+            </div>
+        </main>
+    </div>
+    <script src="./utils.js"></script>
+    <script src="./preview.js"></script>
+</body>
+
+</html>

@@ -9,8 +9,6 @@ const generateTodoTemplate = (inputValue, createdAt, id) => {
     <div class="group mb-3 flex flex-row justify-between px-2 py-2 group-hover:bg-gray-200 rounded-lg bg-blue-200">
         <!-- Todo input value -->
         <button class="text-lg font-medium truncate max-w-sm" onclick="handlePreviewTodo('${id}')">${inputValue}</button>
-        <p class="text-sm font-medium flex items-center italic">${todoDate}</p>
-        
         <!-- edit icon -->
         <div class="invisible group-hover:visible">
         <button class="mr-[1rem]  border border-gray-400 p-1 rounded-full" onclick="handleEditMode('${id}')">
@@ -37,7 +35,7 @@ const displayNewTodos = (parentAttribute, getChildElement) => {
   // Get the parent element
   const parentElement = document.querySelector(`${parentAttribute}`);
   if (todoDatabase.length === 0) {
-    parentElement.innerHTML = `<p class="text-center text-gray-600 my-auto">Your todos will appear here</p>`;
+    parentElement.innerHTML = `<p class="text-center text-gray-600 my-auto">Activities list</p>`;
     return;
   }
   parentElement.innerHTML = "";
@@ -67,6 +65,8 @@ const createTodo = (event) => {
     todoName: todoValue,
     id: uuid(),
     createdAt: Date.now(),
+
+
   };
   const todoDatabase = readTodo(todoKey);
   // Store new todo in the database.

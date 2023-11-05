@@ -34,5 +34,5 @@ const storeTodo = (todoKey, todoDatabase) => {
 
 const handlePreviewTodo = (todoId) =>{
     storeTodo("currentTodoId", todoId)
-    location.href = "./preview-todo.html"
+    location.href = "./preview.html"
 }
